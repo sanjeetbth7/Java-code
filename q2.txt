@@ -1,0 +1,49 @@
+import java.util.Scanner;
+class Stack{
+    int arr=new int[100];
+    int size=100;
+    int top=-1;
+    
+    public void push(int e){
+        top++;
+        arr[top]=e;
+        System.out.println("\nTop ="+arr[top]);
+    }
+    public void pop(){
+        arr[top]=0;
+        top--;
+        System.out.println("\nTop ="+arr[top]);
+    }
+    
+    public boolean isEmpty(){
+        if(top==-1) return true;
+        else return false;
+    }
+    
+    public boolean isFull(){
+        if(top==100) return true;
+        else return false;
+    }
+    
+}
+class Main {
+    public static void main(String[] args) {
+        // Scanner sc = new Scanner();
+        Stack s1= new Stack();
+        s1.push(1);
+        s1.push(2);
+        s1.push(3);
+        s1.push(4);
+        s1.push(5);
+        s1.pop();
+        s1.pop();
+        
+        // checking stact is empty or not
+        if(isEmpty) System.out.println("\nStack is not Empty");
+        else System.out.println("\nStack is Empty");
+        
+        // checking stact is full or not
+        if(isFull) System.out.println("\nStack is Full.");
+        else System.out.println("\nStack is not Full.");
+    }
+}
